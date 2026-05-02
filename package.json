@@ -1,6 +1,6 @@
 {
     "name": "js-task-queue",
-    "version": "0.0.0",
+    "version": "0.0.1",
     "description": "一个轻量级的任务队列库，支持并发控制、任务超时、取消任务和任务优先级",
     "keywords": [
         "task",
