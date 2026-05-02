@@ -1,0 +1,71 @@
+{
+    "name": "js-task-queue",
+    "version": "0.0.0",
+    "description": "一个轻量级的任务队列库，支持并发控制、任务超时、取消任务和任务优先级",
+    "keywords": [
+        "task",
+        "queue",
+        "async",
+        "concurrency",
+        "priority",
+        "timeout",
+        "cancel"
+    ],
+    "main": "dist/cjs/index.js",
+    "module": "dist/esm/index.js",
+    "types": "dist/types/index.d.ts",
+    "exports": {
+        ".": {
+            "types": "./dist/types/index.d.ts",
+            "import": "./dist/esm/index.js",
+            "require": "./dist/cjs/index.js"
+        }
+    },
+    "files": [
+        "dist",
+        "README.md",
+        "LICENSE"
+    ],
+    "sideEffects": false,
+    "scripts": {
+        "format": "prettier --write ./src ./test",
+        "lint": "eslint src test",
+        "prepublishOnly": "pnpm run clean && pnpm run build",
+        "build": "pnpm clean && tsup",
+        "dev": "tsup --watch",
+        "clean": "rimraf dist",
+        "test": "jest",
+        "test:watch": "jest --watch",
+        "test:coverage": "jest --coverage"
+    },
+    "license": "MIT",
+    "engines": {
+        "node": ">=18.0.0"
+    },
+    "devDependencies": {
+        "@types/jest": "^30.0.0",
+        "@types/node": "^24.2.1",
+        "@typescript-eslint/eslint-plugin": "^8.59.1",
+        "@typescript-eslint/parser": "^8.59.1",
+        "eslint": "^10.2.1",
+        "jest": "^30.0.5",
+        "prettier": "^3.6.2",
+        "rimraf": "latest",
+        "ts-jest": "^29.4.1",
+        "tsup": "^8.5.0",
+        "typescript": "^5.9.2"
+    },
+    "author": "xesam <xesam@outlook.com>",
+    "homepage": "https://github.com/xesam/js-task-queue#readme",
+    "publishConfig": {
+        "access": "public",
+        "registry": "https://registry.npmjs.org"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/xesam/js-task-queue.git"
+    },
+    "bugs": {
+        "url": "https://github.com/xesam/js-task-queue/issues"
+    }
+}
